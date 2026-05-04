@@ -67,7 +67,7 @@ async def handler(message: types.Message):
     text = message.text.strip()
 
     # VIN
-    if len(text) >= 10:
+    if len(text)  == 17 and text.isalnum():
         car = decode_vin(text)
 
         if not car["make"]:
